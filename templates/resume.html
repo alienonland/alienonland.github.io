@@ -3,24 +3,11 @@
 		<div class="col-xs-12">
 			<h2>Work History</h2>
 			<!-- ko foreach: jobs -->
-			<div class="panel">
-				<div class="panel-heading">
-					<div class="row">
-						<div class="col-xs-6">
-							<a target="blank" data-bind="{ text: $data.firm.name, attr: { href: $data.firm.website } }" ></a> - 
-							<span data-bind="text: $data.title"></span>
-						</div>
-						<div class="col-xs-6 text-right">
-							<small><span data-bind="text: $data.dateRange"></span></small>
-						</div>
-					</div>
-				</div>
-				<div class="panel-body">
-					<ul data-bind="foreach: $data.responsibilities">
-						<li data-bind="text: $data"></li>
-					</ul>
-				</div>
-			</div>
+			<div data-bind="{ component: { name: 'job-component', params: $data } }"></div>
+			<!--/ko -->
+			<h2>Education</h2>
+			<!-- ko foreach: education -->
+			<div data-bind="{ component: { name: 'job-component', params: $data } }"></div>
 			<!-- /ko -->
 		</div>
 	</div>

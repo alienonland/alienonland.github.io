@@ -1,4 +1,4 @@
-define(['knockout', 'sammy-latest.min'], function(ko, sammy) {
+define(['knockout', 'sammy'], function(ko, sammy) {
 	var NavigationViewModel = function (){
 		var self = this;
 		self.currentPageComponent = ko.observable();

@@ -1,0 +1,18 @@
+<div class="panel">
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-xs-8">
+				<a target="blank" data-bind="{ text: $data.firm.name, attr: { href: $data.firm.website } }" ></a> - 
+				<span data-bind="text: $data.title"></span>
+			</div>
+			<div class="col-xs-4 text-right">
+				<small><span data-bind="text: $data.dateRange"></span></small>
+			</div>
+		</div>
+	</div>
+	<div class="panel-body">
+		<ul data-bind="foreach: $data.responsibilities">
+			<li data-bind="text: $data"></li>
+		</ul>
+	</div>
+</div>

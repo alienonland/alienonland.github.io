@@ -15,4 +15,12 @@ define(["knockout"], function(ko) {
 		template: { require: 'text!templates/resume.html' },
 		viewModel: { require: 'scripts/ResumeViewModel' }
   	});
+  	ko.components.register('job-component', {
+  		template: { require: 'text!templates/job.html'},
+  		viewModel: {
+  			createViewModel: function(params) {
+  				return params;
+  			}
+  		}
+  	});
 });
