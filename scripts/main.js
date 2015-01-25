@@ -2,7 +2,7 @@ define([
  	"jquery", 
  	"bootstrap",
   	"knockout-3.2.0",
-  	"domready!",
+  	"domReady!",
   	"scripts/NavigationViewModel"
   		], function($, bs, ko, doc,  navVM) {
   	ko.components.register('nav-bar-component', {
