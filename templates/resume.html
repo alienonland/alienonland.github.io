@@ -1,0 +1,26 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<h2>Work History</h2>
+			<!-- ko.foreach myJobs -->
+			<div class="panel">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-xs-6">
+							<span data-bind="text: firm" ></span><span data-bind="text: title"></span>
+						</div>
+						<div class="col-xs-6 text-right">
+							<small><span data-bind="text: dateRange"></span></small>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					<ul data-bind="foreach: responsibilities">
+						<li data-bind="text: $data"></li>
+					</ul>
+				</div>
+			</div>
+			<!-- /ko -->
+		</div>
+	</div>
+</div>

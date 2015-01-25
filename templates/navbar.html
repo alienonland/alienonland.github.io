@@ -12,16 +12,19 @@
         <div class="collapse navbar-collapse navbar-right" id="nav-collapse-items">
             <ul class="nav navbar-nav">
 
-                <li role="presenation" class="active">
+                <li role="presenation" 
+                data-bind="{ css: { 'active': isHome } }">
                     <a href="#">Home</a>
                 </li>
                 <li role="presenation">
                     <a href="#">About Me</a>
                 </li>
-                <li role="presenation">
-                    <a href="#">Resume</a>
+                <li role="presenation"
+                data-bind="{ css: { 'active': isResume } }">
+                    <a href="#Resume">Resume</a>
                 </li>
-                <li role="presenation">
+                <li role="presenation"
+                data-bind="{ css: { 'active': isContact } }">
                     <a href="#Contact">Contact</a>
                 </li>
             </ul>
