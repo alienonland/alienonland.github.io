@@ -13,6 +13,6 @@ define(["knockout"], function(ko) {
   	});
   	ko.components.register('resume-component', {
 		template: { require: 'text!templates/resume.html' },
-		viewModel: { require: 'scripts/NavigationViewModel' }
+		viewModel: { require: 'scripts/ResumeViewModel' }
   	});
 });
