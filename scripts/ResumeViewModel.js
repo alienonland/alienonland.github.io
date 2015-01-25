@@ -10,7 +10,10 @@ define(["knockout", "komapping", "scripts/JobViewModel"], function(ko, kom, jobV
 				endDate: null,
 				responsibilities: 
 				[
-				"Lead techology campus recruitng program"
+				"Architecture and development of ASP.NET MVC web pages",
+				"Lead techology campus recruitng program",
+				"Lead web tier framework development"
+
 				]
 			},
 			{

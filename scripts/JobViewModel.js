@@ -6,7 +6,7 @@ define(["knockout", "scripts/OrganizationViewModel"], function(ko, OrganizationV
 		self.startDate = ko.observable(options.startDate);
 		self.endDate = ko.observable(options.endDate);
 		self.dateRange = ko.pureComputed(function() {
-			return self.startDate().toDateString() + '-' + (self.endDate() != null ? self.endDate().toDateString() : 'Present');  
+			return self.startDate().toDateString() + ' - ' + (self.endDate() != null ? self.endDate().toDateString() : 'Present');  
 		});	
 		self.responsibilities = ko.observableArray(options.responsibilities);
 		return self;
