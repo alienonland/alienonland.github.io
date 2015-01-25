@@ -1,5 +1,9 @@
 requirejs.config({
 	baseUrl:"/lib",
+	shim: {
+		"bootstrap" : { deps : ["jquery"] },
+		"sammy" : {deps: ["jquery"] }
+	},
 	paths: {
 		"templates" : "../templates",
 		"scripts" : "../scripts",
