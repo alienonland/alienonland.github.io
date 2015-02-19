@@ -12,8 +12,8 @@ define(["knockout", "komapping", "scripts/JobViewModel"], function(ko, kom, jobV
 				[
 				"Architecture and development of ASP.NET MVC web pages",
 				"Technical lead for BXAccess, Blackstone's industry leading investor portal",
-				"Lead techology campus recruitng program",
-				"Lead web tier framework development"
+				"Lead techology campus recruiting program, new hire training, and summer internship program",
+				"Lead web tier framework development across Blackstone's next gen web applications"
 
 				]
 			},
@@ -25,7 +25,8 @@ define(["knockout", "komapping", "scripts/JobViewModel"], function(ko, kom, jobV
 				endDate: new Date(2012, 1, 3),
 				responsibilities: 
 				[
-				"Team lead for Filings, Fixed Income and Mobile functionalities"
+				"Team lead for Filings, Fixed Income, Solr (document search), Public Site, and Mobile functionalities",
+				"Developed ASP.NET Web Forms pages and controls"
 				]
 			}
 			],
@@ -37,6 +38,35 @@ define(["knockout", "komapping", "scripts/JobViewModel"], function(ko, kom, jobV
 				startDate: new Date(2003, 8),
 				endDate: new Date(2007, 4)
 			}
+			],
+			skills: [ 
+				'ASP.NET MVC',
+				'C#',
+				'JavaScript',
+				'jQuery / AJAX',
+				'Bootstrap',
+				'SQL Server / T-SQL',
+				'HTML / CSS',
+				'SASS',
+				'Git / Mercurial / SVN',
+				'Visual Studio',
+				'IIS 7',
+				'Knockout',
+				'Highcharts'
+			],
+			interests: [
+				'Data Visualization',
+				'Macro Economics',
+				'Baseball'],
+			pastExperience: [ 
+				'Objective-C / iOS development',
+				'Lucene / Solr',
+				'ASP.NET WebForms',
+				'Umbraco CMS',
+				'VB.NET',
+				'XSLT / XSL-FO',
+				'Apache FOP',
+				'Processing'
 			]
 		};
 
@@ -55,9 +85,15 @@ define(["knockout", "komapping", "scripts/JobViewModel"], function(ko, kom, jobV
 
 		var self = this;
 		var mapped = ko.mapping.fromJS(resume,mapping);
+		var caseInsensitiveSort = function(a,b){
+			return (a.toLowerCase() > b.toLowerCase()) ? 1 : -1;
+		};
 		self.jobs = ko.observableArray(mapped.jobs());
 		self.education = ko.observableArray(mapped.education());
 		self.other = ko.observableArray();
+		self.skills = mapped.skills().sort(caseInsensitiveSort);
+		self.interests = mapped.interests().sort(caseInsensitiveSort);
+		self.pastExperience = mapped.pastExperience().sort(caseInsensitiveSort);
 		return self;
 	};
 });
